@@ -23,29 +23,5 @@ Chơi ngay: https://maple9xxx.github.io/loto
 - Tự động lưu trạng thái ván chơi vào LocalStorage — tải lại trang không mất dữ liệu
 - Thiết kế tối ưu cho điện thoại, xử lý tap delay 300ms
 
-## Bộ bài
-
-Ứng dụng sử dụng bộ lô tô chuẩn gồm 8 màu, mỗi màu 2 tờ, mỗi tờ 3 bảng, mỗi bảng 3 hàng × 5 số. Số chạy từ 1 đến 90.
-
-| Màu | Tờ 1 | Tờ 2 |
-|---|---|---|
-| Xanh Dương | Tờ 1 (Bảng 7–9) | Tờ 2 (Bảng 11–12, 38) |
-| Xanh Lá Nhạt | Tờ 13 (Bảng 13–15) | Tờ 14 (Bảng 16–18) |
-| Đỏ | Tờ Đỏ 1 (Bảng 1–3) | Tờ Đỏ 2 (Bảng 4–6) |
-| Xanh Lá Đậm | Tờ 34 (Bảng 34–36) | Tờ 31 (Bảng 31–33) |
-| Cam | Tờ 22 (Bảng 22–24) | Tờ 19 (Bảng 19–21) |
-| Vàng | Tờ 43 (Bảng 43–45) | Tờ 46 (Bảng 46–48) |
-| Tím | Tờ 37 (Bảng 37–39) | Tờ 40 (Bảng 40–42) |
-| Hồng | Tờ 25 (Bảng 25–27) | Tờ 28 (Bảng 28–30) |
-
----
-
-## Công nghệ
-
-Ứng dụng được xây dựng hoàn toàn bằng HTML5, CSS3 và JavaScript thuần — không có framework, không có dependency ngoài Google Fonts. Âm thanh được tổng hợp trực tiếp qua Web Audio API, không cần file âm thanh bên ngoài.
-
----
-
-## Giấy phép
-
-MIT License — tự do sử dụng và chỉnh sửa cho mục đích cá nhân hoặc cộng đồng.
+<img width="1073" height="1996" alt="1000013925" src="https://github.com/user-attachments/assets/4906c586-5940-404a-948b-1549771b4dae" />
+<img width="1066" height="2005" alt="1000013926" src="https://github.com/user-attachments/assets/46dbe59a-77d0-499b-8ea2-5fadfa0fb9df" />
