@@ -1,5 +1,5 @@
 // Service worker: lưu sẵn toàn bộ app để mở được khi mất mạng. File này được build.mjs điền danh sách + mã bản build.
-const BUILD = 'f8b9d6e57a';
+const BUILD = 'd053fe057d';
 const CACHE = `loto-${BUILD}`;
 const ASSETS = [
   "./",

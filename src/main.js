@@ -165,9 +165,11 @@ function waitToast(rowIdx) {
   toast({ icon: 'zap', kind: mine ? 'mine' : 'wait', title, sub, html: `<div class="t-list">${who}</div>`, ms: 5200, onTap: () => setTab('watch') });
 }
 
+function applyFx() { document.documentElement.dataset.fx = store.prefs.quality === 'eco' ? 'eco' : 'high'; }
+
 function onPref({ key, value }) {
   if (key === 'sound') updateSoundBtn();
-  if (key === 'quality') app.stage?.setQuality(value);
+  if (key === 'quality') { applyFx(); app.stage?.setQuality(value); }
   if (key === 'wakeLock') setWakeLock(value);
   if (key === 'installDismissed') updateInstallUI();
   syncCall();
@@ -211,6 +213,7 @@ async function initStage() {
 
 /* ================= khởi động ================= */
 function boot() {
+  applyFx();
   $$('.tab-ic').forEach((el) => { el.innerHTML = icon(el.dataset.ic, 22); });
   initCall(); initWatch(); initTickets(); initMore(); initCelebrate();
 

@@ -12,6 +12,7 @@ import { FX } from './fx.js';
 import { COLORS } from '../engine.js';
 
 const FOV = 28;
+const AMBIENT_FRAME_MS = 48;   // nền hội chợ khi đứng yên: ~20 khung/giây (đủ mượt vì chuyển động rất chậm)
 const MAX_BALLS = 8;           // 1 bóng chính + tối đa 7 bóng trên dải
 const rand = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -67,7 +68,9 @@ export class Stage3D {
     this.frames = 0; this.accum = 0; this.degradeLevel = 0;
     this.autoDegrade = !navigator.webdriver;
 
-    this.renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+    // MSAA chỉ cần ở màn hình thường; từ ~2x trở lên viền đã mịn sẵn mà MSAA lại ngốn băng thông GPU
+    const aa = (window.devicePixelRatio || 1) < 1.75;
+    this.renderer = new WebGLRenderer({ canvas, alpha: true, antialias: aa, powerPreference: 'high-performance' });
     this.renderer.setClearColor(0x000000, 0);
     this.renderer.outputColorSpace = SRGBColorSpace;
     this.renderer.toneMapping = NeutralToneMapping;
@@ -444,7 +447,7 @@ export class Stage3D {
     const ambientOn = this.quality === 'high' && !this.reduced;
     const busy = this._busy(now);
     if (!busy && !ambientOn) return;                       // ngủ cho đến khi có việc
-    if (!busy && now - this.lastRender < 33) { this.raf = requestAnimationFrame(this._loop); return; }
+    if (!busy && now - this.lastRender < AMBIENT_FRAME_MS) { this.raf = requestAnimationFrame(this._loop); return; }
 
     const dt = Math.min(0.05, Math.max(0.001, (now - this.last) / 1000));
     this.last = now; this.lastRender = now; this.t += dt; this.dirty = false;

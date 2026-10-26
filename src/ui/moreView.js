@@ -75,7 +75,7 @@ export function renderMore() {
       ${sw('wakeLock', 'sun', 'Giữ màn hình sáng', 'Không tự khóa máy trong lúc chơi')}
       ${sw('speak', 'mic', 'Đọc số thành tiếng', 'Đọc lại số bạn vừa chạm để khỏi nhầm')}
       ${sw('showHot', 'flame', 'Đánh dấu số đang được đợi', 'Viền cam + chấm màu ngay trên bảng số')}
-      <div class="set"><span class="set-ic">${icon('sparkles', 18)}</span><span class="set-tx"><b>Hiệu ứng 3D</b><small>Tiết kiệm pin: nền đứng yên</small></span>
+      <div class="set"><span class="set-ic">${icon('sparkles', 18)}</span><span class="set-tx"><b>Hiệu ứng 3D</b><small>Tiết kiệm: nền đứng yên, bỏ làm mờ kính</small></span>
         <span class="seg"><button type="button" data-quality="high" class="${prefs.quality === 'high' ? 'on' : ''}">Đầy đủ</button><button type="button" data-quality="eco" class="${prefs.quality === 'eco' ? 'on' : ''}">Tiết kiệm</button></span></div>
     </div>
     <p class="about">Lô Tô Dò Số · bản 2.0 · dữ liệu lưu ngay trên máy bạn</p>`;
