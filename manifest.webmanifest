@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Lô Tô Dò Số",
+  "short_name": "Lô Tô",
+  "description": "Dò lô tô giấy trên điện thoại: chạm số vừa nghe, tự đánh dấu cho cả 8 màu vé và báo ai đang đợi, ai kinh.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0820",
+  "theme_color": "#0d0820",
+  "categories": ["games", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
